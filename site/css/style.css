@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #2a7ae4;
+    --text-color: #333333;
+    --background-color: #f5f7fa;
+    --border-radius: 0.5rem;
+    --transition-duration: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.site-header,
+.site-footer {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.site-main {
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.intro {
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease,
+        transform var(--transition-duration) ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #1e5cb8;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
