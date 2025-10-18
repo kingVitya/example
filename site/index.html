@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебные материалы</title>
+    <style>
+        :root {
+            --primary-color: #2a4b8d;
+            --accent-color: #f0b429;
+            --light-bg: #f7f9fc;
+            --text-color: #1e1e1e;
+            --muted-text: #4f5d75;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Roboto, sans-serif;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #1a2e5a);
+            color: #fff;
+            padding: 24px 32px;
+        }
+
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo {
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
+            background-color: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .project-title {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .project-title h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .project-title p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 32px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .intro {
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 18px 45px rgba(42, 75, 141, 0.08);
+            display: grid;
+            gap: 16px;
+        }
+
+        .intro h2 {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .intro p {
+            color: var(--muted-text);
+            font-size: 16px;
+        }
+
+        .catalog {
+            display: grid;
+            gap: 24px;
+        }
+
+        .catalog h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 14px 30px rgba(42, 75, 141, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(42, 75, 141, 0.12);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .card .authors {
+            font-weight: 600;
+            color: var(--muted-text);
+        }
+
+        .card p {
+            flex: 1;
+            color: var(--muted-text);
+            font-size: 15px;
+        }
+
+        .card a {
+            align-self: flex-start;
+            color: #fff;
+            background-color: var(--accent-color);
+            padding: 10px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .card a:hover {
+            background-color: #d49a1c;
+        }
+
+        .contacts {
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 18px 45px rgba(42, 75, 141, 0.08);
+        }
+
+        .contacts h2 {
+            font-size: 26px;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .contacts p {
+            color: var(--muted-text);
+            margin-bottom: 24px;
+        }
+
+        .contact-placeholder {
+            border: 2px dashed rgba(42, 75, 141, 0.3);
+            border-radius: 12px;
+            padding: 24px;
+            color: var(--muted-text);
+            text-align: center;
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #1a2e5a;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 16px 0;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 12px;
+            }
+
+            main {
+                padding: 32px 20px 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo" aria-hidden="true">EDU</div>
+            <div class="project-title">
+                <h1>Цифровая библиотека</h1>
+                <p>Учебные материалы для преподавателей и студентов в едином каталоге.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro" id="about">
+            <h2>О проекте</h2>
+            <p>
+                Цифровая библиотека аккумулирует лучшие учебные пособия и методические материалы по основным
+                дисциплинам. Мы стремимся сделать знания доступными, а поиск нужного учебника — простым и удобным.
+            </p>
+            <p>
+                Команда проекта постоянно обновляет каталог, добавляя новые издания и проверенные источники.
+                Делитесь своими предложениями и помогайте развивать образовательную экосистему вместе с нами.
+            </p>
+        </section>
+
+        <section class="catalog" id="catalog">
+            <h2>Каталог учебников</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Алгоритмы: построение и анализ</h3>
+                    <div class="authors">Томас Кормен, Чарльз Лейзерсон, Рональд Ривест, Клиффорд Штайн</div>
+                    <p>
+                        Классический курс по алгоритмам, охватывающий структуру данных, сортировки, графы и динамическое
+                        программирование. Включает детальные доказательства и анализ сложности.
+                    </p>
+                    <a href="#">Скачать PDF</a>
+                </article>
+
+                <article class="card">
+                    <h3>Основы компьютерных сетей</h3>
+                    <div class="authors">Эндрю Таненбаум, Дэвид Уэзеролл</div>
+                    <p>
+                        Полное руководство по сетевым технологиям: модели, протоколы, безопасность и примеры
+                        реального применения. Подходит для студентов и специалистов-практиков.
+                    </p>
+                    <a href="#">Скачать PDF</a>
+                </article>
+
+                <article class="card">
+                    <h3>Математический анализ. Базовый курс</h3>
+                    <div class="authors">Алексей С. Холодов</div>
+                    <p>
+                        Структурированное изложение ключевых тем математического анализа с примерами и задачами для
+                        самостоятельного решения. Подходит для подготовки к экзаменам.
+                    </p>
+                    <a href="#">Скачать PDF</a>
+                </article>
+
+                <article class="card">
+                    <h3>Введение в машинное обучение</h3>
+                    <div class="authors">Эндрю Ын</div>
+                    <p>
+                        Практическое введение в основные алгоритмы машинного обучения и методы оценки моделей.
+                        Включает наглядные примеры и рекомендации по реализации.
+                    </p>
+                    <a href="#">Скачать PDF</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contacts" id="contacts">
+            <h2>Контакты</h2>
+            <p>Скоро здесь появится форма обратной связи. А пока — напишите нам на адрес <a href="mailto:info@library.example">info@library.example</a>.</p>
+            <div class="contact-placeholder">
+                Форма обратной связи в разработке. Следите за обновлениями!
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Цифровая библиотека. Все права защищены.
+    </footer>
+</body>
+</html>
